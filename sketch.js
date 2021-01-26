@@ -20,6 +20,14 @@ function draw() {
     balloon.x = balloon.x - 10;
   }
   
+  if(keyDown("d") && keyDown("ctrl")){
+    balloon.x = balloon.x + 15;
+  }
+
+  if(keyDown("a") && keyDown("ctrl")){
+    balloon.x = balloon.x - 15;
+  }
+
   if(keyDown("d")){
     balloon.x = balloon.x + 10;
   }
@@ -35,7 +43,14 @@ function draw() {
 
   textSize(20);
   fill("blue");
-  text("Use UP, DOWN, LEFT, RIGHT arrow keys to move the Hot Air Balloon.",50,50);
+  text("Use W  arrow key to move the Hot Air Balloon up.",50,50);
+  text("Use S  arrow key to move the Hot Air Balloon down.",50,75);
+  text("Use D  arrow key to move the Hot Air Balloon right.",50,95);
+  text("Use A  arrow key to move the Hot Air Balloon left.",50,115);
+  text("Use CTRL + A arrow key to increase the speed.",50,135);
+  text("Use CTRL + D arrow key to increase the speed.",50,155);
+
+
 
   drawSprites();
 }
